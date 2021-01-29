@@ -50,6 +50,8 @@ jobs:
         # disable multipass
         # ref: https://github.com/electron-userland/electron-builder/issues/4903#issuecomment-671010636
         SNAPCRAFT_BUILD_ENVIRONMENT: host
+        # https://github.com/electron-userland/electron-builder/issues/3608#issuecomment-503999328
+        _REMOTE_BUILD: true
         CI: true
         CI_PULL_REQUEST: ${{ github.event_name == 'pull_request' }}
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
